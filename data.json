@@ -1,0 +1,61 @@
+[
+    {
+        "qst":"What bands are classified as the 'Big Four' of thrash metal?",
+        "anw1":"Metallica, Anthrax, Slayer, Megadeth",
+        "anw2":"Metallica, Anthrax, Slayer, Disturbed",
+        "anw3":"Anthrax, Pantera, Mötley Crüe, Slayer",
+        "anw4":"Slayer, Lamb of God, Anthrax, Megadeth",       
+        "anw5":" Pantera, Disturbed, Korn, Lamb of God",
+        "trueAnw":"Metallica, Anthrax, Slayer, Megadeth"
+    },
+    {
+        "qst":"What year was the first thrash metal album released?        ",
+        "anw1":"1991",
+        "anw2":"1986",
+        "anw3":"1976",
+        "anw4":"1981",       
+        "anw5":"1983",
+        "trueAnw":"1983"
+    },
+    {
+        "qst":"Who of these people were kicked out of the thrash band Metallica and later formed the thrash band Megadeth?",
+        "anw1":"Kirk Hammet",
+        "anw2":"James Hetfield",
+        "anw3":"Dave Mustaine",
+        "anw4":"Kerry King",       
+        "anw5":"Darrel Abbot",
+        "trueAnw":"Dave Mustaine"
+    },
+    {
+        "qst":"Diamond Head and Motorhead were the largest influence to which thrash band?",
+        "anw1":"Anthrax",
+        "anw2":"Megadeth",
+        "anw3":"Lamb of God",
+        "anw4":"Metallica",       
+        "anw5":"Pantera",
+        "trueAnw":"Metallica"
+
+    },
+    {
+        "qst":"In the 'Clash of the Titan's' Tour in the 90's, which one of the 'Big Four' of thrash bands was noticably not touring?",
+        "anw1":"Anthrax",
+        "anw2":"Megadeth",
+        "anw3":"Lamb of God",
+        "anw4":"Metallica",       
+        "anw5":"Pantera",
+        "trueAnw":"Metallica"
+
+    },
+    {
+        "qst":"Thrash Metal is defined by:",
+        "anw1":"How low the guitars are tuned.",
+        "anw2":"How fast the lead singer sings the lyrics",
+        "anw3":"The speed and intensity of the songs.",
+        "anw4":"The \"Death Metal Grunt\" of the singers.",       
+        "anw5":"The percussionist of the band consistantly playing blast beats.",
+        "trueAnw":"The speed and intensity of the songs."
+
+    }
+    
+
+]
