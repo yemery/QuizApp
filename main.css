@@ -22,6 +22,7 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    /* display: none; */
 }
 /* .cA .cB{
     padding: 1%;
@@ -53,7 +54,7 @@ body{
     padding: 37px;
     /* background-color: white; */
 }
-.cA .cB .footer button{
+.cA .cB .footer button,.start button{
     background-color: #1E0508;
     /* font-size: 18px; */
     border: 1px solid transparent;
@@ -70,7 +71,31 @@ body{
     display: flex;
     /* align-items: center; */
     flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
     margin-top: 37px;
     /* margin-bottom: 19px; */
 
+}
+.bodyCont #qstReg #qstReg div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.bodyCont #qstReg #qstReg input{
+    width: 15px;
+    margin-left: 10px;
+}
+.start{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.start button{
+    background-color: #5E1414;
+
+}
+.cA{
+    display: none;
 }

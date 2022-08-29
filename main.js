@@ -6,14 +6,13 @@ function getData() {
             let myDataArr=JSON.parse(this.responseText)
             // console.log(myDataArr)
             // console.log(myDataArr[0].options.length)
-            let myBtn=document.getElementById('btn')
             let indexQst=0
             pullData(myDataArr,0)
             timerFun(myDataArr,indexQst)
 
            
             myBtn.addEventListener('click',function (){
-              myBtn.className='clicked'
+              myBtn.classList.add='clicked'
               if(indexQst<myDataArr.length){
                 divQst.innerHTML=""
                 pullData(myDataArr,indexQst)
@@ -30,24 +29,26 @@ function getData() {
 
     
 }
+let myBtn=document.getElementById('btn')
+
 function aintClicked(arr,i) {
-    timerFun(arr,i)
+    
     divQst.innerHTML=""
     pullData(arr,i)
     index++
-  
+    timerFun(arr,i)
 }
 function timerFun(arr,index) {
-  let c=0
+  let c=20
   let myInterval=setInterval(() => {
   
     timer.innerHTML=c
-    if (c==20) {
-      clearInterval(myInterval)
-      // aintClicked(arr,index)
+    if (c==0) {
+      // clearInterval(myInterval)
+      aintClicked(arr,index)
     }
-    c++
-  }, 100);
+    c--
+  }, 1000);
 }
 
 getData()
@@ -85,11 +86,14 @@ function pullData(arr,index) {
   //   $(div).append(`<lable>${i}<label>`)
 
   //   }
-
-
- 
-
-   
-    
 }
+
+let startBtn=document.getElementById('btnStart')
+let startCont=document.getElementById('startCont')
+let blocApp=document.getElementById('cA')
+startBtn.addEventListener('click',()=>{
+  startCont.style.display='none'
+  blocApp.style.display='block'
+
+})
 
