@@ -1,61 +1,74 @@
 [
     {
         "qst":"What bands are classified as the 'Big Four' of thrash metal?",
-        "anw1":"Metallica, Anthrax, Slayer, Megadeth",
-        "anw2":"Metallica, Anthrax, Slayer, Disturbed",
-        "anw3":"Anthrax, Pantera, Mötley Crüe, Slayer",
-        "anw4":"Slayer, Lamb of God, Anthrax, Megadeth",       
-        "anw5":" Pantera, Disturbed, Korn, Lamb of God",
-        "trueAnw":"Metallica, Anthrax, Slayer, Megadeth"
+        "trueAnw":"Metallica, Anthrax, Slayer, Megadeth",
+        "options":[
+            "Metallica, Anthrax, Slayer, Megadeth",
+            "Metallica, Anthrax, Slayer, Disturbed",
+            "Anthrax, Pantera, Mötley Crüe, Slayer",
+            "Slayer, Lamb of God, Anthrax, Megadeth",       
+            "Pantera, Disturbed, Korn, Lamb of God"
+        ]
     },
     {
-        "qst":"What year was the first thrash metal album released?        ",
-        "anw1":"1991",
-        "anw2":"1986",
-        "anw3":"1976",
-        "anw4":"1981",       
-        "anw5":"1983",
-        "trueAnw":"1983"
+        "qst":"What year was the first thrash metal album released?",
+        "trueAnw":"1983",
+        "options":[
+            "1991",
+            "1986",
+            "1976",
+            "1981",       
+            "1983"
+        ]
     },
     {
         "qst":"Who of these people were kicked out of the thrash band Metallica and later formed the thrash band Megadeth?",
-        "anw1":"Kirk Hammet",
-        "anw2":"James Hetfield",
-        "anw3":"Dave Mustaine",
-        "anw4":"Kerry King",       
-        "anw5":"Darrel Abbot",
-        "trueAnw":"Dave Mustaine"
+        "trueAnw":"Dave Mustaine",
+        "options":[
+            "Kirk Hammet",
+            "James Hetfield",
+            "Dave Mustaine",
+            "Kerry King",       
+            "Darrel Abbot"
+        ]
     },
     {
         "qst":"Diamond Head and Motorhead were the largest influence to which thrash band?",
-        "anw1":"Anthrax",
-        "anw2":"Megadeth",
-        "anw3":"Lamb of God",
-        "anw4":"Metallica",       
-        "anw5":"Pantera",
-        "trueAnw":"Metallica"
+        "trueAnw":"Metallica",
+        "options":[
+            "Anthrax",
+            "Megadeth",
+            "Lamb of God",
+            "Metallica",       
+            "Pantera"
+        ]
 
     },
     {
         "qst":"In the 'Clash of the Titan's' Tour in the 90's, which one of the 'Big Four' of thrash bands was noticably not touring?",
-        "anw1":"Anthrax",
-        "anw2":"Megadeth",
-        "anw3":"Lamb of God",
-        "anw4":"Metallica",       
-        "anw5":"Pantera",
-        "trueAnw":"Metallica"
+        "trueAnw":"Metallica",
+        "options":[
+            "Anthrax",
+            "Megadeth",
+            "Lamb of God",
+            "Metallica",       
+            "Pantera"
+        ]
 
     },
     {
         "qst":"Thrash Metal is defined by:",
-        "anw1":"How low the guitars are tuned.",
-        "anw2":"How fast the lead singer sings the lyrics",
-        "anw3":"The speed and intensity of the songs.",
-        "anw4":"The \"Death Metal Grunt\" of the singers.",       
-        "anw5":"The percussionist of the band consistantly playing blast beats.",
-        "trueAnw":"The speed and intensity of the songs."
+        "trueAnw":"The speed and intensity of the songs.",
+        "options":[
+            "How low the guitars are tuned.",
+            "How fast the lead singer sings the lyrics",
+            "The speed and intensity of the songs.",
+            "The \"Death Metal Grunt\" of the singers.",       
+            "The percussionist of the band consistantly playing blast beats."
+        ]
 
     }
+  
     
 
 ]

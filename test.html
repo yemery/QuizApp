@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="time">0</p>
+    <p id="name">meryem</p>
+    <script>
+        // let arr=['mer',"ajm","mmm"]
+
+        // function timer() {
+        //     let myP=document.getElementById('time') 
+
+        //     let c=0
+        //     let timeout=setTimeout(() => {
+        //         let interval=setInterval(() => {
+        //         c++
+        //         myP.innerHTML=c
+        //         if (c==20) {
+        //             clearInterval(interval)
+                    
+        //         }
+                
+        //     }, 1000);
+                
+        //     },1000);
+
+            
+        // }
+        // for(i of arr){
+        //     console.log('***')
+        //     // console.log(i)
+            
+        //     document.getElementById('name').innerHTML=i
+        //     timer()
+        // }
+        // // let interval=setInterval(() => {
+        // //     for(i of arr){
+        // //         console.log(i)
+        // //         console.log(c)
+        // //         c++
+        // //         if (c==10) {
+        // //             clearInterval(interval)
+                    
+        // //         }
+
+        // //     }
+       
+            
+        // //     // let myP=document.getElementById('time') 
+        // // },1000);
+        function multiplyAll(arr) {
+  let product = 1;
+  // Only change code below this line
+for(let i =0;i<arr.length;i++){
+  for(let j=0;j<arr[i].length;j++){
+    product*=arr[i][j]
+    console.log(arr[i][j])
+    // console.log(product,arr[i][j])
+  }
+}
+console.log(product)
+  // Only change code above this line
+  return product;
+}
+
+multiplyAll([[1, 2], [3, 4], [5, 6, 7]]);
+  
+    </script>
+    
+</body>
+</html>
