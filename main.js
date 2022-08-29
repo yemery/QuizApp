@@ -9,12 +9,16 @@ function getData() {
             let myBtn=document.getElementById('btn')
             let indexQst=0
             pullData(myDataArr,0)
-            myBtn.addEventListener('click',()=>{
+            timerFun(myDataArr,indexQst)
+
+           
+            myBtn.addEventListener('click',function (){
+              myBtn.className='clicked'
               if(indexQst<myDataArr.length){
                 divQst.innerHTML=""
                 pullData(myDataArr,indexQst)
                 indexQst++
-
+                timerFun(myDataArr,indexQst)
               }
               
             })
@@ -26,15 +30,35 @@ function getData() {
 
     
 }
+function aintClicked(arr,i) {
+    timerFun(arr,i)
+    divQst.innerHTML=""
+    pullData(arr,i)
+    index++
+  
+}
+function timerFun(arr,index) {
+  let c=0
+  let myInterval=setInterval(() => {
+  
+    timer.innerHTML=c
+    if (c==20) {
+      clearInterval(myInterval)
+      // aintClicked(arr,index)
+    }
+    c++
+  }, 100);
+}
 
 getData()
 let divQst=document.getElementById('qstReg')
+let timer=document.getElementById('timer')
+
 
 function pullData(arr,index) {
     let content=document.getElementById('bodyCont')
     let indexOf=document.getElementById('indexQst')
     let arrLen=document.getElementById('arrLen')
-    let timer=document.getElementById('timer')
     let titleQst=document.getElementById('title')
     indexOf.innerHTML=index+1
     arrLen.innerHTML=arr.length
