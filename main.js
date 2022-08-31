@@ -1,5 +1,6 @@
 const data= [
     {
+        "id":1,
         "qst":"What bands are classified as the 'Big Four' of thrash metal?",
         "trueAnw":"Metallica, Anthrax, Slayer, Megadeth",
         "options":[
@@ -11,6 +12,7 @@ const data= [
         ]
     },
     {
+        "id":2,
         "qst":"What year was the first thrash metal album released?",
         "trueAnw":"1983",
         "options":[
@@ -22,6 +24,7 @@ const data= [
         ]
     },
     {
+        "id":3,
         "qst":"Who of these people were kicked out of the thrash band Metallica and later formed the thrash band Megadeth?",
         "trueAnw":"Dave Mustaine",
         "options":[
@@ -33,6 +36,7 @@ const data= [
         ]
     },
     {
+        "id":4,
         "qst":"Diamond Head and Motorhead were the largest influence to which thrash band?",
         "trueAnw":"Metallica",
         "options":[
@@ -45,6 +49,7 @@ const data= [
 
     },
     {
+        "id":5,
         "qst":"In the 'Clash of the Titan's' Tour in the 90's, which one of the 'Big Four' of thrash bands was noticably not touring?",
         "trueAnw":"Metallica",
         "options":[
@@ -57,6 +62,7 @@ const data= [
 
     },
     {
+        "id":6,
         "qst":"Thrash Metal is defined by:",
         "trueAnw":"The speed and intensity of the songs.",
         "options":[
@@ -69,14 +75,13 @@ const data= [
 
     }
   
-    
-
 ]
 // console.log(data)
 let indexQst=0
 console.log(data.length)
-function getQst(indexQst) {
-    
+function showQst(indexQst) {
+    if (indexQst<data.length) {
+        document.getElementById('qstReg').innerHTML=""
         let content=document.getElementById('bodyCont')
         let indexOf=document.getElementById('indexQst')
         let arrLen=document.getElementById('arrLen')
@@ -86,32 +91,34 @@ function getQst(indexQst) {
         titleQst.innerHTML=data[indexQst].qst
         for(i of data[indexQst].options){
           let divContainer=document.createElement('div')
-          let radioElm=document.createElement('input')
+          var radioElm=document.createElement('input')
           radioElm.setAttribute('type','radio')
+          radioElm.name=data[indexQst].id
+          radioElm.value=i
           let lableElm=document.createElement('label')
           lableElm.append(i)
-          // console.log(radioElm)
           divContainer.appendChild(radioElm)
           divContainer.appendChild(lableElm)
           divQst.appendChild(divContainer)
           content.appendChild(divQst)
-
+         
+          
         }
+        // console.log(`'${data[indexQst].id}'`)
+        var checkedRadio=document.getElementsByName(`'${data[indexQst].id}'`)
+      
+        }else{
+            alert('hhh')
+        }
+}
 
 
-        
-    
-}
-function showQst(indexQst) {
-    if (indexQst<data.length) {
-    document.getElementById('qstReg').innerHTML=""
-    getQst(indexQst)
-    countDown(timer)
-    }
-    
-}
 function goNext() {
+   
     showQst(indexQst++)
+    countDown(timer)
+
+   
 }
 let timer=20
 let interval;
@@ -123,11 +130,12 @@ let divQst=document.getElementById('qstReg')
 let startBtn=document.getElementById('btnStart')
 let startCont=document.getElementById('startCont')
 let blocApp=document.getElementById('cA')
-startBtn.addEventListener('click',()=>{ 
-  startCont.style.display='none'
-  blocApp.style.display='block'
-  goNext()
-})
+function start() {
+    startCont.style.display='none'
+    blocApp.style.display='block'
+    goNext()
+    
+}
 
 function countDown(timer) {
     if (interval) {
@@ -135,12 +143,13 @@ function countDown(timer) {
         interval=null
     }
     interval=setInterval(() => {
-        timerSpan.innerHTML=timer--
         if (timer==0) {
             goNext()
 
+
         }
 
+        timerSpan.innerHTML=timer--
 
         
     }, 500);
