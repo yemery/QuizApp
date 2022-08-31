@@ -74,8 +74,9 @@ const data= [
 ]
 // console.log(data)
 let indexQst=0
+console.log(data.length)
 function getQst(indexQst) {
-    if (indexQst<data.length) {
+    if (indexQst<=data.length) {
         let content=document.getElementById('bodyCont')
         let indexOf=document.getElementById('indexQst')
         let arrLen=document.getElementById('arrLen')
@@ -101,17 +102,15 @@ function getQst(indexQst) {
         }
     
 }
-function showQst() {
+function showQst(indexQst) {
     document.getElementById('qstReg').innerHTML=""
     getQst(indexQst)
     countDown(timer)
+    // indexQst++
     
 }
 function goNext() {
-    showQst()
-    indexQst++
-
-    
+    showQst(indexQst++)
 }
 let timer=20
 let interval;
@@ -126,7 +125,7 @@ let blocApp=document.getElementById('cA')
 startBtn.addEventListener('click',()=>{ 
   startCont.style.display='none'
   blocApp.style.display='block'
-
+  goNext()
 })
 
 function countDown(timer) {
