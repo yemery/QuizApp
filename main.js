@@ -101,23 +101,29 @@ function showQst(indexQst) {
           divContainer.appendChild(lableElm)
           divQst.appendChild(divContainer)
           content.appendChild(divQst)
-         
-          
         }
-        // console.log(`'${data[indexQst].id}'`)
-        var checkedRadio=document.getElementsByName(`'${data[indexQst].id}'`)
-      
+    
+
         }else{
-            alert('hhh')
+            // alert('hhh',trueAnsw)
+            document.getElementById('timerCont').style.display="none"
+            document.getElementById('bodyCont').style.display='none'
+            document.getElementById('footer').style.display='none'
+            document.getElementById('outRes').style.display='block'
+            document.getElementById('outRes').addEventListener('click',()=>{
+                document.getElementById('output').innerHTML=`your final score: ${data.length-trueAnsw} of ${data.length}`
+            })
+            console.log(trueAnsw)
         }
 }
 
 
 function goNext() {
-   
+    if (indexQst<=data.length) {
+    checkedAnw()
     showQst(indexQst++)
     countDown(timer)
-
+    }
    
 }
 let timer=20
@@ -125,11 +131,10 @@ let interval;
 let timerSpan=document.getElementById('timer')
 let myBtn=document.getElementById('btn')
 let divQst=document.getElementById('qstReg')
-
-// startBtn
 let startBtn=document.getElementById('btnStart')
 let startCont=document.getElementById('startCont')
 let blocApp=document.getElementById('cA')
+var trueAnsw=0
 function start() {
     startCont.style.display='none'
     blocApp.style.display='block'
@@ -145,13 +150,36 @@ function countDown(timer) {
     interval=setInterval(() => {
         if (timer==0) {
             goNext()
+        }
+        timerSpan.innerHTML=timer--
+    }, 500);
+}
 
+
+let finalScore=""
+
+
+function checkedAnw() {
+    // console.log(document.querySelectorAll(`input[name="${data[indexQst].id}"]:checked`))
+    // console.log(indexQst-1)
+    var checked=document.querySelectorAll(`input`)
+    for(let i of checked){
+        // console.log(i,i.value)
+        if(i.checked==true){
+            // console.log(i.value,data[indexQst-1],indexQst)
+            if (i.value==data[indexQst-1]['trueAnw']) {
+                trueAnsw++
+                console.log(i.value,'True',data[indexQst-1]['trueAnw'])
+
+
+                
+            }else{
+                console.log(i.value,'False',data[indexQst-1]['trueAnw'])
+            }
 
         }
+    }
 
-        timerSpan.innerHTML=timer--
 
-        
-    }, 500);
-    
 }
+

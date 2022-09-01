@@ -18,16 +18,21 @@
         <div class="container cB">
             <div class="header">
                 <h4>ThrashQuiz</h4>
-                <p>time left <span id="timer">20</span></p>
+                <p id="timerCont">time left <span id="timer">20</span></p>
             </div>
             <div class="bodyCont" id="bodyCont">
                 <h5 id="title"></h5>
                 <div id="qstReg">
                 </div>
             </div>
-            <div class="footer">
+            <div class="footer" id="footer">
                 <p><span id="indexQst">0</span> of <span id="arrLen">0</span> questions</p>
                 <button type="button" class="btn btn-danger nextQst" id="btn"  onclick="goNext()" >next</button>
+            </div>
+            <div class="result" id="res">
+                <button class="btn btn-danger" id="outRes">score</button>
+                <p id="output"></p>
+
             </div>
         </div>
     </div>
