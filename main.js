@@ -111,7 +111,7 @@ function showQst(indexQst) {
             document.getElementById('footer').style.display='none'
             document.getElementById('outRes').style.display='block'
             document.getElementById('outRes').addEventListener('click',()=>{
-                document.getElementById('output').innerHTML=`your final score: ${data.length-trueAnsw} of ${data.length}`
+                document.getElementById('output').innerHTML=`your final score: ${trueAnsw} of ${data.length}`
             })
             console.log(trueAnsw)
         }
@@ -162,23 +162,26 @@ let finalScore=""
 function checkedAnw() {
     // console.log(document.querySelectorAll(`input[name="${data[indexQst].id}"]:checked`))
     // console.log(indexQst-1)
+    var boolCheck=false
     var checked=document.querySelectorAll(`input`)
     for(let i of checked){
         // console.log(i,i.value)
         if(i.checked==true){
+            boolCheck=true
             // console.log(i.value,data[indexQst-1],indexQst)
             if (i.value==data[indexQst-1]['trueAnw']) {
                 trueAnsw++
                 console.log(i.value,'True',data[indexQst-1]['trueAnw'])
 
 
-                
-            }else{
-                console.log(i.value,'False',data[indexQst-1]['trueAnw'])
-            }
+              }  
+            // else{
+            //     console.log(i.value,'False',data[indexQst-1]['trueAnw'])
+            // }
 
         }
     }
+    return boolCheck
 
 
 }
